@@ -1,0 +1,854 @@
+/*! CSS Used from: https://themesdesign.in/hexzy/vertical/blue/assets/css/bootstrap.min.css */
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+/* The logo to be used */
+body.login div#login h1 a {
+    background-image: url("../images/logo.png");
+}
+
+body {
+    background-image: url("../images/restaurant.png") !important;
+    background-color: #004a99 !important;    
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;    
+}
+
+#nav a, #backtoblog a {
+    color: #ffee00 !important;
+    font-size: 16px !important;
+}
+
+#nav a:hover, #backtoblog a:hover {
+    color: #ffee00 !important;
+    font-size: 16px !important;
+    border-bottom: dotted #ffee00 1px;
+    border-spacing: 2px;
+}
+
+h4 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+}
+
+b {
+    font-weight: bolder;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+
+button {
+    border-radius: 0;
+}
+
+button:focus {
+    outline: 1px dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+button,
+input {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+button {
+    text-transform: none;
+}
+
+[type=submit],
+button {
+    -webkit-appearance: button;
+}
+
+[type=submit]::-moz-focus-inner,
+button::-moz-focus-inner {
+    padding: 0;
+    border-style: none;
+}
+
+input[type=checkbox] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+h4 {
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-12,
+.col-sm-5,
+.col-sm-7 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+@media (min-width:576px) {
+    .col-sm-5 {
+        -ms-flex: 0 0 41.666667%;
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
+    }
+
+    .col-sm-7 {
+        -ms-flex: 0 0 58.333333%;
+        flex: 0 0 58.333333%;
+        max-width: 58.333333%;
+    }
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+@media (prefers-reduced-motion:reduce) {
+    .form-control {
+        transition: none;
+    }
+}
+
+.form-control::-ms-expand {
+    background-color: transparent;
+    border: 0;
+}
+
+.form-control:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #495057;
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);
+}
+
+.form-control::-webkit-input-placeholder {
+    color: #6c757d;
+    opacity: 1;
+}
+
+.form-control::-moz-placeholder {
+    color: #6c757d;
+    opacity: 1;
+}
+
+.form-control:-ms-input-placeholder {
+    color: #6c757d;
+    opacity: 1;
+}
+
+.form-control::-ms-input-placeholder {
+    color: #6c757d;
+    opacity: 1;
+}
+
+.form-control::placeholder {
+    color: #6c757d;
+    opacity: 1;
+}
+
+.form-control:disabled {
+    background-color: #e9ecef;
+    opacity: 1;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+@media (prefers-reduced-motion:reduce) {
+    .btn {
+        transition: none;
+    }
+}
+
+.btn:hover {
+    color: #212529;
+    text-decoration: none;
+}
+
+.btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);
+}
+
+.btn:disabled {
+    opacity: .65;
+}
+
+body.login div#login form#loginform p.submit input#wp-submit, body.login div#login form#lostpasswordform p.submit input#wp-submit {
+    color: #fff;
+    background: rgb(56,136,221);
+    background: linear-gradient(0deg, rgba(56,136,221,1) 6%, rgba(0,74,153,1) 54%);
+}
+
+body.login div#login form#loginform p.submit input#wp-submit:hover, body.login div#login form#lostpasswordform p.submit input#wp-submit:hover {
+    color: #fff;
+    background-color: #004a99;
+    border-color: #0062cc;
+}
+
+body.login div#login form#loginform p.submit input#wp-submit:focus, body.login div#login form#lostpasswordform p.submit input#wp-submit:focus {
+    color: #fff;
+    /* background-color: #004a99;
+    border-color: #0062cc; */
+    box-shadow: 0 0 0 .2rem rgba(38, 143, 255, .5);
+    background: rgb(0,74,153);
+    background: linear-gradient(90deg, rgba(0,74,153,1) 51%, rgba(9,9,121,1) 78%);
+}
+
+body.login div#login form#loginform p.submit input#wp-submit:disabled, body.login div#login form#lostpasswordform p.submit input#wp-submit:disabled {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+body.login div#login form#loginform p.forgetmenot {
+    padding-top: 13px;
+}
+
+.btn-lg, body.login div#login form#lostpasswordform p.submit input#wp-submit, body.login div#login form#loginform p.submit input#wp-submit {
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+}
+
+body.login div#login form#loginform p.submit input#wp-submit, body.login div#login form#lostpasswordform p.submit input#wp-submit {
+    display: block;
+    width: 100%;
+}
+
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+}
+
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+
+@media print {
+
+    *,
+    ::after,
+    ::before {
+        text-shadow: none !important;
+        box-shadow: none !important;
+    }
+
+    a:not(.btn) {
+        text-decoration: underline;
+    }
+
+    img {
+        page-break-inside: avoid;
+    }
+
+    body {
+        min-width: 992px !important;
+    }
+}
+
+/*! CSS Used from: https://themesdesign.in/hexzy/vertical/blue/assets/css/icons.css */
+.fa {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+.fa-lock:before {
+    content: "\f023";
+}
+
+.fa {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+/*! CSS Used from: https://themesdesign.in/hexzy/vertical/blue/assets/css/style.css */
+body {
+    background: #f8f9fa;
+    font-family: "Nunito", sans-serif;
+    margin: 0;
+    font-size: 14px;
+}
+
+h4 {
+    color: #3e445e;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+h4 {
+    line-height: 22px;
+    font-size: 18px;
+}
+
+* {
+    outline: none !important;
+}
+
+a:hover {
+    outline: 0;
+    text-decoration: none;
+}
+
+a:active {
+    outline: 0;
+    text-decoration: none;
+}
+
+a:focus {
+    outline: 0;
+    text-decoration: none;
+}
+
+.row {
+    margin-right: -10px;
+    margin-left: -10px;
+}
+
+.col-12,
+.col-sm-5,
+.col-sm-7 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.text-muted {
+    color: #a5a7b2 !important;
+}
+
+.form-control {
+    -moz-border-radius: 2px;
+    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: 2px;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    background-color: #fafafa;
+    border-radius: 2px;
+    border: 1px solid #f4f7Fa;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    height: 36px;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+}
+
+.form-control:focus {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.m-r-5 {
+    margin-right: 5px;
+}
+
+.m-t-0 {
+    margin-top: 0px;
+}
+
+.m-t-20 {
+    margin-top: 20px;
+}
+
+.m-t-30 {
+    margin-top: 30px !important;
+}
+
+.m-t-40 {
+    margin-top: 40px !important;
+}
+
+.m-b-0 {
+    margin-bottom: 0 !important;
+}
+
+.m-b-15 {
+    margin-bottom: 15px;
+}
+
+.waves-effect {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    vertical-align: middle;
+    z-index: 1;
+    will-change: opacity, transform;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+@media print {
+    .logo {
+        display: none !important;
+        margin: 0px !important;
+        padding: 0px !important;
+    }
+}
+
+.btn {
+    border-radius: 2px;
+    padding: 6px 14px;
+    font-size: 14px;
+}
+
+.btn-lg {
+    padding: 10px 16px !important;
+    font-size: 16px;
+}
+
+#login {
+    padding: 0;
+}
+body.login div#login form#loginform p.submit input#wp-submit {
+    color: #ffffff !important;
+    height: 45px;
+    margin: 10px 0;
+    font-size: 18px;
+
+}
+
+body.login div#login form#loginform p.submit input#wp-submit {
+    /* background-color: #6cbafa !important; */
+    border: 1px solid #6cbafa !important;
+}
+
+body.login div#login form#loginform p.submit input#wp-submit:hover,
+body.login div#login form#loginform p.submit input#wp-submit:focus,
+body.login div#login form#loginform p.submit input#wp-submit:active {
+    background-color: #53aef9 !important;
+    border: 1px solid #53aef9 !important;
+}
+
+
+.card {
+    border: none;
+    -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.checkbox label {
+    display: inline-block;
+    padding-left: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.checkbox label::before {
+    -o-transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    background-color: #ffffff;
+    border-radius: 3px;
+    border: 1px solid #cccccc;
+    content: "";
+    display: inline-block;
+    height: 17px;
+    left: 0;
+    margin-left: -20px;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+    width: 17px;
+    outline: none !important;
+}
+
+.checkbox label::after {
+    color: #555555;
+    display: inline-block;
+    font-size: 11px;
+    height: 16px;
+    left: 0;
+    margin-left: -20px;
+    padding-left: 3px;
+    padding-top: 1px;
+    position: absolute;
+    top: 0;
+    width: 16px;
+}
+
+.checkbox input[type="checkbox"] {
+    cursor: pointer;
+    opacity: 0;
+    z-index: 1;
+    outline: none !important;
+}
+
+.checkbox input[type="checkbox"]:disabled+label {
+    opacity: 0.65;
+}
+
+.checkbox input[type="checkbox"]:focus+label::before {
+    outline-offset: -2px;
+    outline: none;
+}
+
+.checkbox input[type="checkbox"]:checked+label::after {
+    content: "\f00c";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+.checkbox input[type="checkbox"]:disabled+label::before {
+    background-color: #f4f7Fa;
+    cursor: not-allowed;
+}
+
+.checkbox-primary input[type="checkbox"]:checked+label::before {
+    background-color: #6cbafa;
+    border-color: #6cbafa;
+}
+
+.checkbox-primary input[type="checkbox"]:checked+label::after {
+    color: #ffffff;
+}
+
+body.login div#login {
+    margin: 7.5% auto;
+    width: 420px;
+    position: relative;
+}
+
+body.login div#login form#loginform, .error-page {
+    border: 4px solid #eee !important;
+}
+
+body.login div#login form#loginform .logo-admin {
+    font-size: 28px;
+}
+
+.logo {
+    color: #3e445e !important;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: .03em;
+    line-height: 70px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    body {
+        overflow-x: hidden;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    body.login div#login {
+        width: 90%;
+    }
+}
+
+@media (max-width: 620px) {
+    .logo {
+        display: none !important;
+    }
+}
+
+/*! CSS Used fontfaces */
+@font-face {
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: 400;
+    font-display: auto;
+    src: url("https://themesdesign.in/hexzy/vertical/blue/assets/fonts/fa-regular-400.eot");
+    src: url("https://themesdesign.in/hexzy/vertical/blue/assets/fonts/fa-regular-400.eot#iefix") format("embedded-opentype"), url("https://themesdesign.in/hexzy/vertical/blue/assets/fonts/fa-regular-400.woff2") format("woff2"), url("https://themesdesign.in/hexzy/vertical/blue/assets/fonts/fa-regular-400.woff") format("woff"), url("https://themesdesign.in/hexzy/vertical/blue/assets/fonts/fa-regular-400.ttf") format("truetype"), url("https://themesdesign.in/hexzy/vertical/blue/assets/fonts/fa-regular-400.svg#fontawesome") format("svg");
+}
+
+@font-face {
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: 900;
+    font-display: auto;
+    src: url("https://themesdesign.in/hexzy/vertical/blue/assets/fonts/fa-solid-900.eot");
+    src: url("https://themesdesign.in/hexzy/vertical/blue/assets/fonts/fa-solid-900.eot#iefix") format("embedded-opentype"), url("https://themesdesign.in/hexzy/vertical/blue/assets/fonts/fa-solid-900.woff2") format("woff2"), url("https://themesdesign.in/hexzy/vertical/blue/assets/fonts/fa-solid-900.woff") format("woff"), url("https://themesdesign.in/hexzy/vertical/blue/assets/fonts/fa-solid-900.ttf") format("truetype"), url("https://themesdesign.in/hexzy/vertical/blue/assets/fonts/fa-solid-900.svg#fontawesome") format("svg");
+}
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v12/XRXV3I6Li01BKofIOOaBTMnFcQIG.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v12/XRXV3I6Li01BKofIMeaBTMnFcQIG.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v12/XRXV3I6Li01BKofIOuaBTMnFcQIG.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v12/XRXV3I6Li01BKofIO-aBTMnFcQIG.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v12/XRXV3I6Li01BKofINeaBTMnFcQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: local('Nunito SemiBold'), local('Nunito-SemiBold'), url(https://fonts.gstatic.com/s/nunito/v12/XRXW3I6Li01BKofA6sKUbOvIWzgPDEtj.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: local('Nunito SemiBold'), local('Nunito-SemiBold'), url(https://fonts.gstatic.com/s/nunito/v12/XRXW3I6Li01BKofA6sKUZevIWzgPDEtj.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: local('Nunito SemiBold'), local('Nunito-SemiBold'), url(https://fonts.gstatic.com/s/nunito/v12/XRXW3I6Li01BKofA6sKUbuvIWzgPDEtj.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: local('Nunito SemiBold'), local('Nunito-SemiBold'), url(https://fonts.gstatic.com/s/nunito/v12/XRXW3I6Li01BKofA6sKUb-vIWzgPDEtj.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: local('Nunito SemiBold'), local('Nunito-SemiBold'), url(https://fonts.gstatic.com/s/nunito/v12/XRXW3I6Li01BKofA6sKUYevIWzgPDA.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('Nunito Bold'), local('Nunito-Bold'), url(https://fonts.gstatic.com/s/nunito/v12/XRXW3I6Li01BKofAjsOUbOvIWzgPDEtj.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('Nunito Bold'), local('Nunito-Bold'), url(https://fonts.gstatic.com/s/nunito/v12/XRXW3I6Li01BKofAjsOUZevIWzgPDEtj.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('Nunito Bold'), local('Nunito-Bold'), url(https://fonts.gstatic.com/s/nunito/v12/XRXW3I6Li01BKofAjsOUbuvIWzgPDEtj.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('Nunito Bold'), local('Nunito-Bold'), url(https://fonts.gstatic.com/s/nunito/v12/XRXW3I6Li01BKofAjsOUb-vIWzgPDEtj.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('Nunito Bold'), local('Nunito-Bold'), url(https://fonts.gstatic.com/s/nunito/v12/XRXW3I6Li01BKofAjsOUYevIWzgPDA.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.error-page {
+    background-color: white;
+    padding: 20px !important;
+}
+
+.error-page img{
+    float: left;
+    width: 60px;
+    margin-right: 10px;
+}
+
+.error-page h1 {
+    line-height: 26px;
+}
+
+#error-content {
+    padding-top: 10px;
+}
+
