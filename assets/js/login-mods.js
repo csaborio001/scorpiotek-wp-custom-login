@@ -23,3 +23,4 @@ function moveRememberMeCheckBox($) {
 function checkRememberMeCheckBox($) {
     $('#rememberme').prop('checked', true);
 }
+

@@ -1,0 +1,25 @@
+#loginform {
+    padding-bottom: 25px;
+    border: 2px solid #eee;
+    // padding: 20px 20px 20px 20px;
+}
+
+#login {
+    width: 420px;
+
+    input[type="text"], input[type="password"] {
+        padding: 10px 10px;
+    }
+
+    input[type="submit"] {
+        background-color: $button-background-color;
+        border: 1px solid $button-border-color;
+        color: $button-text-color;
+        margin-bottom: 10px !important;
+    }
+
+    #rememberme {
+        float: left;
+        margin-top: 2px;
+    }
+}
