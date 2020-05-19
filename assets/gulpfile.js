@@ -18,10 +18,10 @@ function js() {
 function styles() {
   return gulp
 	.src(source + "/sass/style.scss")
-	.pipe(sourcemaps.init())
-	.pipe(sass().on('error', sass.logError))
-  .pipe(sourcemaps.write())
-  // .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+	// .pipe(sourcemaps.init())
+	// .pipe(sass().on('error', sass.logError))
+  // .pipe(sourcemaps.write())
+  .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
 	.pipe(gulp.dest(dest + "css"));
 }
 

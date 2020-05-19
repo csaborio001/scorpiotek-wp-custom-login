@@ -1,7 +1,7 @@
-#loginform {
+#loginform, #lostpasswordform, #itsec-pwls-login-user-form, #itsec-passwordless-login, #itsec-2fa {
     padding-bottom: 25px;
     border: 2px solid #eee;
-    // padding: 20px 20px 20px 20px;
+    background: rgba(0,0,0,0.2);
 }
 
 #login {
@@ -12,14 +12,23 @@
     }
 
     input[type="submit"] {
-        background-color: $button-background-color;
-        border: 1px solid $button-border-color;
-        color: $button-text-color;
-        margin-bottom: 10px !important;
+        @extend .btn;
+    }
+
+    input[type="submit"]:hover {
+        @extend .btn
     }
 
     #rememberme {
         float: left;
         margin-top: 2px;
+    }
+
+    a {
+        color: $login-box-color;
+    }
+
+    a:hover {
+        color: $login-box-hover-color;
     }
 }
