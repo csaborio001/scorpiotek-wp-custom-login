@@ -17,7 +17,7 @@
     overflow: unset;
 }
 
-#itsec-2fa-on-board-app, #itsec-2fa-on-board {
+#itsec-2fa-on-board-app, #itsec-2fa-on-board, #itsec-backup-codes__warning-message {
     h2 {
         color: $vinnies-blue;
     }
@@ -29,7 +29,7 @@
     }
 }
 
-.itsec-pwls-login {
+#itsec-2fa {
     p {
         color: white;
     }
