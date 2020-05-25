@@ -1,8 +1,8 @@
-#loginform {
-    button {
-        @extend .btn;
-    }
-}
+// #loginform {
+//     button {
+//         @extend .btn;
+//     }
+// }
 
 .itsec-pwls-login-fallback {
     position: unset !important;
@@ -11,10 +11,6 @@
     margin-right: auto !important;
     box-sizing: unset;
     width: unset;
-}
-
-#loginform {
-    overflow: unset;
 }
 
 #itsec-2fa-on-board-app, #itsec-2fa-on-board, #itsec-backup-codes__warning-message {

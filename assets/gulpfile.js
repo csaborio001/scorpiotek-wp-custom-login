@@ -35,7 +35,7 @@ function server() {
   browserSync.init({
 	notify: false,
 	browser: "firefox developer edition",
-	proxy: "http://localhost/connect.vinnies.org.au/wp-login.php",
+	proxy: "http://localhost/compeer.vinnies.org.au/wp-login.php",
 	port:8886,
   });
 
