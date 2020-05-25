@@ -1,9 +1,3 @@
-// #loginform {
-//     button {
-//         @extend .btn;
-//     }
-// }
-
 .itsec-pwls-login-fallback {
     position: unset !important;
     bottom: unset !important;
@@ -17,7 +11,7 @@
     h2 {
         color: $vinnies-blue;
     }
-    p {
+    p, label {
         color: black;
     }
     a {
