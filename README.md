@@ -6,7 +6,7 @@ A simple plugin to replace the default logon screen in WordPress with a cleaner,
 
 ## 0.1.1
 
-* 
+* Changed from CSS to SASS
 
 ## 0.1
 
