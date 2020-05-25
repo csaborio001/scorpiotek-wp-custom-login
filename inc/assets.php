@@ -9,7 +9,7 @@ function custom_login_stylesheet() {
 	if ( is_login_page() ) {
 		wp_enqueue_style(
 			'custom-login',
-			plugins_url() . '/scorpiotek-wp-custom-login/assets/css/login-styles.css',
+			plugins_url() . '/scorpiotek-wp-custom-login/assets/css/style.css',
 			array(),
 			'0.1'
 		);

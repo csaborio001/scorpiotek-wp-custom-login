@@ -1,0 +1,32 @@
+// #loginform {
+//     button {
+//         @extend .btn;
+//     }
+// }
+
+.itsec-pwls-login-fallback {
+    position: unset !important;
+    bottom: unset !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: unset;
+    width: unset;
+}
+
+#itsec-2fa-on-board-app, #itsec-2fa-on-board, #itsec-backup-codes__warning-message {
+    h2 {
+        color: $vinnies-blue;
+    }
+    p {
+        color: black;
+    }
+    a {
+        color: unset !important;
+    }
+}
+// itsec-pwls-login is for this screen: https://1drv.ms/u/s!AuYDDdfI2CCi6ZtPrQRVXBzGlnu1Gw
+#itsec-2fa, .itsec-pwls-login {
+    p {
+        color: white;
+    }
+}

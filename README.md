@@ -4,7 +4,11 @@ A simple plugin to replace the default logon screen in WordPress with a cleaner,
 
 # Version History
 
-## 0.1 (current)
+## 0.1.1
+
+* Changed from CSS to SASS
+
+## 0.1
 
 * Initial Version
 * Allows an image to be placed inside /assets/images 
