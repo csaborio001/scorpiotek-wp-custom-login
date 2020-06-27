@@ -13,7 +13,7 @@
     width: unset;
 }
 
-#itsec-2fa-on-board-app, #itsec-2fa-on-board, #itsec-backup-codes__warning-message {
+#itsec-2fa-on-board-app, #itsec-2fa-on-board, {
     h2 {
         color: $vinnies-blue;
     }
@@ -29,4 +29,9 @@
     p {
         color: white;
     }
+}
+
+#itsec-backup-codes__warning-message {
+    border-left-color: $vinnies-yellow !important;
+    color: black;
 }
