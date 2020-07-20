@@ -19,7 +19,7 @@
     }
 }
 // itsec-pwls-login is for this screen: https://1drv.ms/u/s!AuYDDdfI2CCi6ZtPrQRVXBzGlnu1Gw
-#itsec-2fa, .itsec-pwls-login {
+#itsec-2fa, .itsec-pwls-login, #resetpassform {
     p {
         color: white;
     }
@@ -28,4 +28,12 @@
 #itsec-backup-codes__warning-message {
     border-left-color: $vinnies-yellow !important;
     color: black;
+}
+
+#resetpassform {
+    background-color: rgba(0, 0, 0, 0.2);
+    label {
+        font-size: larger;
+        color: white;
+    }
 }
