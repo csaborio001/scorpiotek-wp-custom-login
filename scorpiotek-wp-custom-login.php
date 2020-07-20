@@ -6,7 +6,7 @@
  *
  * @package compeer
  *
- * Version: 0.1
+ * Version: 0.1.3
  *
  * Text Domain: scorpiotek
  **/
