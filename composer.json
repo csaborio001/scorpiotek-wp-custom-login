@@ -1,0 +1,22 @@
+{
+    "name": "scorpiotek/wpcustomlogin",
+    "description": "Defines the dependencies the ScorpioTek WP Custon Login Plugin",
+    "type": "library",
+    "require": {
+        "php": "^7.4"
+    },
+    "require-dev": {
+
+    },    
+    "authors": [
+        {
+            "name": "Christian Saborio",
+            "email": "csaborio@scorpiotek.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ScorpioTek\\WPCustomLogin\\": "src/"
+        }
+    }
+}

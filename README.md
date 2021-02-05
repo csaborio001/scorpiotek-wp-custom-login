@@ -4,6 +4,12 @@ A simple plugin to replace the default logon screen in WordPress with a cleaner,
 
 # Version History
 
+## 0.1.4
+
+* Restructed the whole site for easier development.
+* Renamed all assets folders, moved dist process to root
+* Composer 2 upgrade
+
 ## 0.1.3
 
 * Fixed layout of password reset screen
