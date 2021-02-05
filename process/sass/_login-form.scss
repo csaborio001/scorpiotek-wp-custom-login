@@ -45,7 +45,7 @@
     }
 
     h1 a {
-        background-size: 185px !important;
+        background-size: 90% !important;
         width: unset !important;
     }
 
@@ -58,7 +58,14 @@
         color: $error-box-text-color !important;
     }
 
+    .itsec-pwls-login-fallback {
+        display: inline-block;
+    }
 
+    .forgetmenot {
+        display: flex;
+        align-items: end;
+    }
 }
 
 #loginform {

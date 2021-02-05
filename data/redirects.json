@@ -1,5 +1,6 @@
 {
     "administrator": "wp-admin",
-    "editor": "editor",
-    "contributor": "contributor"
+    "editor": "wp-admin",
+    "esaanz_manager": "wp-admin",
+    "cesaa_member": "esaanz-account"
 }

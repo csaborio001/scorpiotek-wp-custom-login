@@ -16,10 +16,10 @@ class LoginRedirect {
 	private $redirect_info_array;
 
 	public function __construct( $settings_file ) {
-		// if ( $this->is_login_page() ) {
-		$this->redirect_info_array = $this->load_settings_file( $settings_file );
-		$this->setup_redirection_hook();
-		// }
+		if ( $this->is_login_page() ) {
+			$this->redirect_info_array = $this->load_settings_file( $settings_file );
+			$this->setup_redirection_hook();
+		}
 	}
 
 	public function setup_redirection_hook() {
@@ -50,10 +50,8 @@ class LoginRedirect {
 			}
 			/** Iterate thru the role list and return the first match. */
 			foreach( $identified_roles as $role) {
-				$target_url = $this->redirect_info_array[$role];
-				$url = home_url( $target_url );
-				/** We return to break out of the loop ASAP. */
-				return $url;
+				$url = $this->redirect_info_array[$role];
+				break;
 			}
 		}
 		return $url;
