@@ -21,9 +21,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 require 'vendor/autoload.php';
 
 use ScorpioTek\WPCustomLogin\AssetLoader;
+use ScorpioTek\WPCustomLogin\LoginRedirect;
 
 /** Load all plugin assets. */
 
-$asset_loader = new AssetLoader();
+$asset_loader   = new AssetLoader();
+// $logon_redirect = new LoginRedirect(  __DIR__ . '/data/redirects.json' );
 
 

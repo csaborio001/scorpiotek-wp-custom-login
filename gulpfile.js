@@ -58,16 +58,16 @@ function watch() {
   // Processes the SASS files inside process/sass and sends minimized output to dist/css.
   gulp.watch(source + "sass/**/*", gulp.parallel(styles)).on("change", browserSync.reload);
   // Keep an eye for changed PHP files.
-  gulp.watch(["./scorpiotek-wp-ajax-filters.php", "./src/**/*.php"], gulp.parallel(php)).on("change", browserSync.reload);
+  gulp.watch(["./src/**/*.php"], gulp.parallel(php)).on("change", browserSync.reload);
   // Keep an eye for changed images.
-  gulp.watch([source + "scripts/**/*.png", source + "scripts/**/*.jpg"], gulp.parallel(images)).on("change", browserSync.reload);
+  gulp.watch([source + "img/**/*.png", source + "img/**/*.jpg"], gulp.parallel(images)).on("change", browserSync.reload);
 }
 
 function server() {
   browserSync.init({
 	notify: false,
 	browser: "firefox developer edition",
-	proxy: "http://localhost:51912",
+	proxy: "http://localhost:19203",
 	port:80,
   });
   watch();
