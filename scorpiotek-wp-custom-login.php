@@ -26,6 +26,6 @@ use ScorpioTek\WPCustomLogin\LoginRedirect;
 /** Load all plugin assets. */
 
 $asset_loader   = new AssetLoader();
-// $logon_redirect = new LoginRedirect(  __DIR__ . '/data/redirects.json' );
+$logon_redirect = new LoginRedirect(  __DIR__ . '/data/redirects.json' );
 
 

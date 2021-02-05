@@ -8,8 +8,9 @@
 actor: AcceptanceTester
 modules:
     enabled:
-        - WPDb
-        - WPBrowser
+        # - WPDb
+        # - WPBrowser
+        - WebDriver
         - \Helper\Acceptance
     config:
         WPDb:
@@ -17,10 +18,10 @@ modules:
             user: '%TEST_SITE_DB_USER%'
             password: '%TEST_SITE_DB_PASSWORD%'
             dump: 'tests/_data/dump.sql'
-            #import the dump before the tests; this means the test site database will be repopulated before the tests.
-            populate: true
+            populator: 'mysql -u $user -p$password -h 127.0.0.1 -P 19204 $dbname < $dump'            #import the dump before the tests; this means the test site database will be repopulated before the tests.
+            # populate: true
             # re-import the dump between tests; this means the test site database will be repopulated between the tests.
-            cleanup: true
+            # cleanup: true
             waitlock: 10
             url: '%TEST_SITE_WP_URL%'
             urlReplacement: true #replace the hardcoded dump URL with the one above
@@ -33,3 +34,12 @@ modules:
             headers:
                 X_TEST_REQUEST: 1
                 X_WPBROWSER_REQUEST: 1
+        WebDriver:
+            url: '%TEST_SITE_WP_URL%'
+            wait: 2
+            window_size: false # disabled in ChromeDriver
+            port: 9515
+            browser: chrome
+            restart: false
+            capabilities:
+                unexpectedAlertBehaviour: 'accept'
