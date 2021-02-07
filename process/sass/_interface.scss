@@ -14,3 +14,7 @@
 .btn:hover {
     border: 2px solid $vinnies-yellow;
 }
+
+.btn:active {
+    background-color: $button-active-bg-color
+}

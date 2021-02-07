@@ -67,7 +67,7 @@ function server() {
   browserSync.init({
 	notify: false,
 	browser: "firefox developer edition",
-	proxy: "http://localhost:19203",
+	proxy: "http://localhost:51912",
 	port:80,
   });
   watch();
