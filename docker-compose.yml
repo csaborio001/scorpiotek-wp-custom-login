@@ -1,0 +1,62 @@
+version: '3.6'
+services:
+  # Image below should be used for testing purposes, uses official WordPress docker image
+  # wordpress:
+  #   image: wordpress:${WORDPRESS_VERSION:-latest}
+  #   container_name: ${COMPOSE_PROJECT_NAME:-wordpress}_wordpress
+  #   volumes:
+  #     - ./config/php.conf.ini:/usr/local/etc/php/php.ini
+  #     # Docker WordPress files will be placed at the root.
+  #     - .:/var/www/html
+  #   environment:
+  #     WORDPRESS_DB_HOST: ${WORDPRESS_DB_HOST:-mysql}
+  #     WORDPRESS_DB_USER: ${DATABASE_USER:-root}
+  #     WORDPRESS_DB_PASSWORD: ${DATABASE_PASSWORD:-password}
+  #     WORDPRESS_DB_NAME: ${COMPOSE_PROJECT_NAME:-wordpress}
+  #     WORDPRESS_TABLE_PREFIX: ${WORDPRESS_TABLE_PREFIX}
+  #   depends_on:
+  #     - mysql
+  #   restart: always
+  #   ports:
+  #       - 8080:80
+
+  # Image is below for development, sets us XDEBUG.
+  wordpress:
+    container_name: ${COMPOSE_PROJECT_NAME:-wordpress}
+    build:
+      dockerfile: Dockerfile # this line is actually redundant here - you need it only if you want to use some custom name for your Dockerfile
+      context: ./xdebug # a path to a directory containing a Dockerfile, or a url to a git repository    
+    volumes:
+      - ./config/php.conf.ini:/usr/local/etc/php/php.ini
+      # Docker WordPress files will be placed at the root.
+      # - .:/var/www/html
+    environment:
+      XDEBUG_CONFIG: "remote_host=host.docker.internal" #This config works for MacOS, otherwise should be ip address of the host machine because docker container cannot find the host by localhost.
+      WORDPRESS_DB_HOST: ${WORDPRESS_DB_HOST:-mysql}
+      WORDPRESS_DB_USER: ${DATABASE_USER:-root}
+      WORDPRESS_DB_PASSWORD: ${DATABASE_PASSWORD:-password}
+      WORDPRESS_DB_NAME: ${COMPOSE_PROJECT_NAME:-wordpress}
+      WORDPRESS_TABLE_PREFIX: ${WORDPRESS_TABLE_PREFIX}
+      # - XDEBUG_CONFIG=remote_host=192.168.1.2
+    depends_on:
+      - mysql
+    restart: always
+    ports:
+        - 19203:80
+
+  mysql:
+    image: mysql:${MYSQL_VERSION:-latest}
+    container_name: ${COMPOSE_PROJECT_NAME}_mysql
+    volumes:
+      - ./mysql:/var/lib/mysql
+    environment:
+      MYSQL_USER: ${DATABASE_USER:-root}
+      MYSQL_ROOT_PASSWORD: ${DATABASE_PASSWORD:-password}
+      MYSQL_PASSWORD: ${DATABASE_PASSWORD:-password}
+      MYSQL_DATABASE: ${COMPOSE_PROJECT_NAME}
+    restart: always
+    ports:
+        - 19204:3306
+
+
+

@@ -6,10 +6,26 @@
  *
  * @package compeer
  *
- * Version: 0.1.3
+ * Version: 0.1.4
  *
  * Text Domain: scorpiotek
  **/
 
 /** Loads the stylesheet which takes care of the logo, colors, etc. */
-require_once 'inc/assets.php';
+
+/** Exit if file is called directly. */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+require 'vendor/autoload.php';
+
+use ScorpioTek\WPCustomLogin\AssetLoader;
+use ScorpioTek\WPCustomLogin\LoginRedirect;
+
+/** Load all plugin assets. */
+
+$asset_loader   = new AssetLoader();
+$logon_redirect = new LoginRedirect(  __DIR__ . '/data/redirects.json' );
+
+
