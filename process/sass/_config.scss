@@ -2,9 +2,10 @@
 
 /* Images and Background. */
 
-$main-logo        : '../img/logo.png';
-$background-image : '../img/background.png';
-$left-bg-colour   : #00427f;
+$main-logo        : '../img/logo.png'; /* 929 x 208 Works Best. */
+$main-logo-background-size  : contain;
+$background-image : '';
+$left-bg-colour   : #7f0074;
 $right-bg-colour  : #1f88c0;
 
 $login-form-border-colour: #fff;
@@ -18,11 +19,11 @@ $link-normal-colour-login-window:  #fff;
 $link-hover-colour-login-window:   yellow;
 $link-visited-colour-login-window: #fff;
 
+/* Errors, warnings, and messeges. */
 $message-colour: #000;
 $message-border-colour: #72aee6;
 $login-error-colour: #000;
 $login-error-border-colour: red;
-
 $itsec-warning-message-colour: #000;
 $itsec-warning-message-border-colour: #F56E28;
 

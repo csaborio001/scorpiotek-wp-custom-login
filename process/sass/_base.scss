@@ -1,5 +1,8 @@
 body {
-    background: linear-gradient(90deg, $left-bg-colour  0%, $right-bg-colour  50%);
+
     background-color: $form-background-colour;
+    background-image: url($background-image);
+    background: linear-gradient(90deg, $left-bg-colour  0%, $right-bg-colour  50%);
+    background-repeat: repeat;
     font-family: $body-font-family !important;
 }
