@@ -1,0 +1,27 @@
+.base-form-button {
+	transition: all 0.5s ease;
+	background: $button-background-colour !important;
+	border: $button-border-colour solid 2px !important;
+	color: $button-text-colour !important;
+	&:hover {
+		background: $button-hover-background-colour !important;
+		border: $button-hover-border-colour solid 2px !important;
+		color: $button-hover-text-colour !important;
+	}
+}
+
+#itsec-pwls-login-user-form__continue,
+#wp-submit,
+p.submit input[type="submit"],
+.itsec-screen__actions--continue,
+.itsec-screen__actions--download {
+	@extend .base-form-button;
+	padding: 15px 30px !important;
+	width: 100% !important;
+}
+
+.itsec-pwls-login__submit {
+	@extend .base-form-button;
+	padding: 30px 30px !important;
+	width: 100% !important;
+}

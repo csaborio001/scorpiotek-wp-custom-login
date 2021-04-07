@@ -2,28 +2,25 @@
 
 A simple plugin to replace the default logon screen in WordPress with a cleaner, more modern looking one without too much fuzz.
 
-# To Test
+# Instructions
 
-1. Install Mutagen
-
-2. Run:
-
-```
-docker-compose build
-docker-compose up -d
-```
-
-3. Install Mutagen
-
-4. Run the following mutagen command to sync the plugin (inside the plugin folder)
+1. CD into your plugins folder.
+2. Updated composer:
 
 ```
-mutagen sync create --sync-mode=one-way-safe --default-owner-beta=www-data \
---name=scorpiotek-wp-custom-login-sync \
-/. docker://scorpiotek-wp-custom-login/var/www/html/wp-content/plugins/scorpiotek-wp-custom-login
+composer update --no-dev -o
 ```
+
+3. Activate the plugin
+
 
 # Version History
+
+## 0.1.5
+
+* Updated READMe to be more clear on installation instructions.
+* Rewrote the entire SASS code to be more efficient and work with iThemes security plugin.
+
 
 ## 0.1.4
 

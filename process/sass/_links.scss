@@ -1,0 +1,30 @@
+a {
+	color: $link-normal-colour-outside-login-window !important;
+	border-bottom: 1px solid transparent;
+	text-decoration: none !important;
+	&:hover {
+		color: $link-hover-colour-outside-login-window !important;
+		border-bottom: 1px solid $link-hover-colour-outside-login-window !important;
+	}
+	&:visited {
+		color: $link-visited-colour-outside-login-window !important;
+	}
+}
+
+#login h1 a {
+	border: none !important;
+	&:hover {
+		border: none !important;
+	}
+}
+
+
+.itsec-screen-container a, .itsec-screen-container .button-link {
+	color: $link-normal-colour-login-window;
+	&:hover {
+		color: $link-hover-colour-login-window !important;
+	}
+	&:visited {
+		color: $link-visited-colour-login-window !important;
+	}
+}

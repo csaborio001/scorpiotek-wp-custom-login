@@ -1,0 +1,39 @@
+/* This is the only file that needs to be modified */
+
+/* Images and Background. */
+
+$main-logo        : '../img/logo.png';
+$background-image : '../img/background.png';
+$left-bg-colour   : #00427f;
+$right-bg-colour  : #1f88c0;
+
+$login-form-border-colour: #fff;
+$login-form-text-colour: #fff;
+
+$link-normal-colour-outside-login-window:  #fff;
+$link-hover-colour-outside-login-window:   #fff;
+$link-visited-colour-outside-login-window: #fff;
+
+$link-normal-colour-login-window:  #fff;
+$link-hover-colour-login-window:   yellow;
+$link-visited-colour-login-window: #fff;
+
+$message-colour: #000;
+$message-border-colour: #72aee6;
+$login-error-colour: #000;
+$login-error-border-colour: red;
+
+$itsec-warning-message-colour: #000;
+$itsec-warning-message-border-colour: #F56E28;
+
+$form-background-colour: rgba(0, 0, 0, 0.13);
+
+$button-text-colour: #fff;
+$button-background-colour: #00427f;
+$button-border-colour: white;
+$button-hover-text-colour: #fff;
+$button-hover-background-colour: #1f88c0;
+$button-hover-border-colour: yellow;
+
+$body-font-family: 'Roboto', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
