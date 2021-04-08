@@ -39,6 +39,10 @@
 	#itsec-backup-codes__warning-message {
 		color: $itsec-warning-message-colour !important;
 		border-left-color: $itsec-warning-message-border-colour !important;		
-	}	
+	}
+
+	.itsec-pwls-login__description {
+		color: $login-form-text-colour !important;
+	}
 }
 

@@ -3,7 +3,7 @@
     "description": "Defines the dependencies the ScorpioTek WP Custon Login Plugin",
     "type": "library",
     "require": {
-        "php": "^7.4"
+        "php": "^7.2"
     },
     "require-dev": {
         "lucatume/wp-browser": "^2.4",
