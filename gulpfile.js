@@ -56,7 +56,7 @@ function watch() {
   // Processes the JS files inside process/scripts and sends minimized output to dist/scripts.
   gulp.watch(source + "scripts/**/*.js", gulp.parallel(js)).on("change", browserSync.reload);
   // Processes the SASS files inside process/sass and sends minimized output to dist/css.
-  gulp.watch(source + "sass/**/*", gulp.parallel(styles)).on("change", browserSync.reload);
+  gulp.watch(source + "sass/**/*", styles).on("change", browserSync.reload);
   // Keep an eye for changed PHP files.
   gulp.watch(["./src/**/*.php"], gulp.parallel(php)).on("change", browserSync.reload);
   // Keep an eye for changed images.
@@ -67,7 +67,7 @@ function server() {
   browserSync.init({
 	notify: false,
 	browser: "firefox developer edition",
-	proxy: "http://localhost:51912",
+	proxy: "http://localhost:19209/wp-admin",
 	port:80,
   });
   watch();

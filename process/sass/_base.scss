@@ -1,19 +1,8 @@
-body.login div#login h1 a {
-    background-image: url($main-logo);
-}
-
 body {
-    background-image: url($background-image) !important;
-    background-color: $fall-back-background-color;
-    margin: 0;
-    font-family: $body-text;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    text-align: left;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
+
+    background-color: $form-background-colour;
+    background-image: url($background-image);
+    background: linear-gradient(90deg, $left-bg-colour  0%, $right-bg-colour  50%);
+    background-repeat: repeat;
+    font-family: $body-font-family !important;
 }

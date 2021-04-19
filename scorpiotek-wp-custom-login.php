@@ -6,9 +6,8 @@
  *
  * @package compeer
  *
- * Version: 0.1.4
+ * Version: 0.1.5
  *
- * Text Domain: scorpiotek
  **/
 
 /** Loads the stylesheet which takes care of the logo, colors, etc. */
