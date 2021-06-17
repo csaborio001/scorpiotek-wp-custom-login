@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '5faa9f81302f794caa6bfdaea9e927186da1ac0e',
+    'reference' => '74e4f6d9b0df3e66a15881a9d8bf3161556e020f',
     'name' => 'scorpiotek/wpcustomlogin',
   ),
   'versions' => 
@@ -41,7 +41,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '5faa9f81302f794caa6bfdaea9e927186da1ac0e',
+      'reference' => '74e4f6d9b0df3e66a15881a9d8bf3161556e020f',
     ),
   ),
 );
