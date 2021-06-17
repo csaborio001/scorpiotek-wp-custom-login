@@ -16,6 +16,11 @@ composer update --no-dev -o
 
 # Version History
 
+## 0.1.6
+
+* Got rid of the data folder, no more loading from JSON
+
+
 ## 0.1.5
 
 * Updated READMe to be more clear on installation instructions.

@@ -13,69 +13,52 @@ namespace ScorpioTek\WPCustomLogin;
  */
 class LoginRedirect {
 
-	private $redirect_info_array;
+	private $redirect_settings;
 
-	public function __construct( $settings_file ) {
+	public function __construct( $redirect_settings ) {
 		if ( $this->is_login_page() ) {
-			$this->redirect_info_array = $this->load_settings_file( $settings_file );
+			$this->redirect_settings = $redirect_settings;
 			$this->setup_redirection_hook();
 		}
 	}
 
-	public function setup_redirection_hook() {
+	/**
+	 * Sets up the callback function that will be called when anyone logs into the website.
+	 */
+	public function setup_redirection_hook(): void {
 		\add_filter( 'login_redirect', array( $this, 'redirect_on_login' ), 10, 3 );
 	}
 	/**
-	 * Called by the login_redirect hook, redirects users on login baseed on what is
-	 * specified in the /data/redirects.json file.
+	 * Called by the login_redirect hook, redirects users depending on the configuration
+	 * that was passed to this class.
 	 *
 	 * @param string  $url the url to redirect the user.
 	 * @param string  $request the url where the original request was made.
-	 * @param WP_User $user the WP_User who is logging in.
+	 * @param \WP_User $user the WP_User who is logging in.
 	 * @return string the URL where the user will be redireted to.
 	 */
 	public function redirect_on_login( $url, $request, $user ) {
-		if( $user && is_object( $user ) && is_a( $user, 'WP_User' ) ) {
-			/** The roles that have been specified in the config file. */
-			$redirected_roles = array_keys( $this->redirect_info_array );
+		/** It is possible to be called when no one has hit the submit button on login form. */
+		if ( ! $user instanceof \WP_User ) {
+			return $url;
+		}
+
+		if ( $user && is_object( $user ) && is_a( $user, 'WP_User' ) ) {
 			/** The roles of the current user as an array. */
-			$user_roles = $user->roles;
-			/** This will return the roles that have been specified in the config file
-			 * that the user belongs to.
-			 */
-			$identified_roles = array_intersect( $redirected_roles, $user_roles );
-			/** The role the user belongs to has not been specified in file. */
-			if ( empty( $identified_roles ) ) {
-				$url = home_url();
-			}
-			/** Iterate thru the role list and return the first match. */
-			foreach( $identified_roles as $role) {
-				$url = $this->redirect_info_array[$role];
-				break;
+			$current_user_roles = $user->roles;
+			foreach ( $this->redirect_settings as $redirect_info ) {
+				/** If there is a match, create the redirection URL. */
+				if ( \in_array( $redirect_info['role'], $current_user_roles ) ) {
+					if ( 'home' === $redirect_info['redirect_base'] ) {
+						$url = \home_url( $redirect_info['redirect_url'] );
+					} elseif ( 'admin' === $redirect_info['redirect_base'] ) {
+						$url = \admin_url( $redirect_info['redirect_url'] );
+					}
+					return $url;
+				}
 			}
 		}
 		return $url;
-	}
-
-	private function load_settings_file( $settings_file ) {
-		if( is_null( $settings_file ) ) {
-			return -1;
-		}
-		/** Try and load the local data file if there is no JSON info when creating. */
-		$json_data = file_get_contents( $settings_file );
-		if ( false === $json_data ) {
-			if ( WP_DEBUG ) {
-				error_log ( __( 'ERROR In ScopriioTek Custom Login: Could not load the json file', 'scorpiotek' ) );
-			}
-			return -1;
-		}
-		$json_decoded_data = json_decode( $json_data, true );
-
-		if ( $json_decoded_data === false || $json_decoded_data === null) {
-			error_log ( __( 'ERROR ScopriioTek Custom Login: Could not load the contents of the json file, most likely incorrect json', 'scorpiotek' ) );
-			return false;
-		}
-		return $json_decoded_data;
 	}
 
 	/**
@@ -92,5 +75,5 @@ class LoginRedirect {
 			),
 			true
 		);
-	}	
+	}
 }

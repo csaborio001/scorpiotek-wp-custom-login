@@ -6,8 +6,7 @@
  *
  * @package compeer
  *
- * Version: 0.1.5
- *
+ * Version: 0.1.6
  **/
 
 /** Loads the stylesheet which takes care of the logo, colors, etc. */
@@ -25,6 +24,19 @@ use ScorpioTek\WPCustomLogin\LoginRedirect;
 /** Load all plugin assets. */
 
 $asset_loader   = new AssetLoader();
-$logon_redirect = new LoginRedirect(  __DIR__ . '/data/redirects.json' );
+$logon_redirect = new LoginRedirect(
+	array(
+		array(
+			'role'          => 'administrator',
+			'redirect_base' => 'admin',
+			'redirect_url'  => '',
+		),
+		array(
+			'role'          => 'esaanz_member',
+			'redirect_base' => 'home',
+			'redirect_url'  => 'account/?action=subscriptions',
+		),
+	)
+);
 
 
